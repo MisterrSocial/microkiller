@@ -6,7 +6,7 @@ import sys
 ######## add prcoess names relevant to your machine below!!########
 ###################################################################
 
-TARGET_PROCESSES: list[str] = ['GameBar.exe', 'msedgewebview2.exe', 'PhoneExperienceHost.exe', 'XboxPcAppFT.exe', 'GameBarPresenceWriter.exe', 'StoreDesktopExtension.exe']
+TARGET_PROCESSES: list[str] = ['MicrosoftEdgeUpdate.exe', 'GameBar.exe', 'msedgewebview2.exe', 'PhoneExperienceHost.exe', 'XboxPcAppFT.exe', 'GameBarPresenceWriter.exe', 'StoreDesktopExtension.exe']
 ###################################################################
 ######################### l33t banner #############################
 ###################################################################
@@ -47,4 +47,5 @@ try:
 
 except KeyboardInterrupt:
     print("\nkilling spree concluded...")
+
     sys.exit(0)
