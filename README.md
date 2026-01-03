@@ -1,5 +1,7 @@
 <img width="1057" height="222" alt="banner" src="https://github.com/user-attachments/assets/2b165324-ced6-407f-b84a-51edde794aa8" />
 
+
+
 simple python script to continuously kill annoying background tasks that microsoft windows runs while full screen gaming.  list is easily edited at the top of the file to customize it for your needs.  if you are getting errors and processes are not being killed, try running the script in admin mode.  
 
 usage:
