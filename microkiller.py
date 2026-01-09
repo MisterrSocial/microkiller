@@ -106,15 +106,10 @@ try:
                     BODY_COUNT = BODY_COUNT + 1
                     sys.stdout.write('\r' + ' ' * 100 + '\r')
                     sys.stdout.write(
-                        f"# killed process [\033[91m{proc_name}\033[0m] \033[90m(PID: {proc.info['pid']})\033[0m"
+                        f"\n# killed process [\033[91m{proc_name}\033[0m] \033[90m(PID: {proc.info['pid']})\033[0m"
                     )
                     sys.stdout.flush()
-                    
-                    """
-                    print(f"gotcha!! {proc_name} (PID: {proc.info['pid']}) // killing...")
-                    proc.kill()
-                    print(f"{proc_name} is dead\n")
-                    """    
+  
             except (psutil.NoSuchProcess, psutil.AccessDenied):
                 pass
             except Exception as e:
@@ -125,4 +120,5 @@ try:
 except KeyboardInterrupt:
     print(f"\n# killing spree [\033[92mconcluded\033[0m] \033[92m//\033[0m body count [\033[91m{BODY_COUNT}\033[0m]")
     sys.exit(0)
+
 
