@@ -6,10 +6,11 @@ import os
 ###################################################################
 ######## add prcoess names relevant to your machine below!!########
 ###################################################################
-
 TARGET_PROCESSES: list[str] = ['UserOOBEBroker.exe', 'OneDrive.Sync.Service.exe', 'MicrosoftEdgeUpdate.exe', 'GameBar.exe', 'msedgewebview2.exe', 'PhoneExperienceHost.exe', 'XboxPcAppFT.exe', 'GameBarPresenceWriter.exe', 'StoreDesktopExtension.exe']
+###################################################################
+CHECK_INTERVAL = 2 #### change seconds interval if you like ########
+####################################################################
 HIT_COUNT = int(len(TARGET_PROCESSES))
-
 BODY_COUNT = int(0)
 
 try:
@@ -60,27 +61,6 @@ def get_gpu_usage():
         return " | ".join(info_lines)
     except pynvml.NVMLError as e:
         return f"GPU error: {e}"
-    
-
-def cprint(text, color="reset", bold=False, end="\n"):
-    COLORS = {
-        "reset": "0",
-        "red": "91",
-        "green": "92",
-        "yellow": "93",
-        "blue": "94",
-        "magenta": "95",
-        "cyan": "96",
-        "white": "97",
-        "gray": "90",
-    }
-
-    style = "1;" if bold else ""
-    color_code = COLORS.get(color, "0")
-
-    print(f"\033[{style}{color_code}m{text}\033[0m", end=end)
-
-
 
 ###################################################################
 ######################### l33t banner #############################
@@ -96,10 +76,6 @@ print('''
 #                                                                                      
 #''')
 print(f"# microkiller [\033[92mstarted\033[0m] \033[92m//\033[0m [\033[91m{HIT_COUNT}\033[0m] tasks in hitlist \033[92m//\033[0m \033[90mpress CTRL+C to\033[0m\033[91m kill\033[0m")
-# print(f"\033[90m# press CTRL+C to stop\033[0m")
-####################################################################
-CHECK_INTERVAL = 2 #### change seconds interval if you like ########
-####################################################################
 
 targets_lower: list[str] = [name.lower() for name in TARGET_PROCESSES]
 
@@ -149,3 +125,4 @@ try:
 except KeyboardInterrupt:
     print(f"\n# killing spree [\033[92mconcluded\033[0m] \033[92m//\033[0m body count [\033[91m{BODY_COUNT}\033[0m]")
     sys.exit(0)
+
