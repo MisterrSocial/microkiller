@@ -12,6 +12,4 @@ if you get an error you likely either do not have python installed or do not hav
 
 sorry if my repo is a bit rough this is my first code publish in almost 20 years lol.
 
-
-<img width="1491" height="772" alt="ss" src="https://github.com/user-attachments/assets/aaaad5e4-b2ef-46b0-812a-16b3f71c2720" />
-
+<img width="1332" height="328" alt="ssv002" src="https://github.com/user-attachments/assets/0c54bbd2-6eb2-4759-a236-9cf79627e773" />
