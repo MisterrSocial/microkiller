@@ -6,10 +6,12 @@ import os
 ###################################################################
 ######## add prcoess names relevant to your machine below!!########
 ###################################################################
-TARGET_PROCESSES: list[str] = ['UserOOBEBroker.exe', 'OneDrive.Sync.Service.exe', 'MicrosoftEdgeUpdate.exe', 'GameBar.exe', 'msedgewebview2.exe', 'PhoneExperienceHost.exe', 'XboxPcAppFT.exe', 'GameBarPresenceWriter.exe', 'StoreDesktopExtension.exe']
+TARGET_PROCESSES: list[str] = ['UserOOBEBroker.exe', 'OneDrive.Sync.Service.exe', 'MicrosoftEdgeUpdate.exe', 'GameBar.exe', 'PhoneExperienceHost.exe', 'XboxPcAppFT.exe', 'GameBarPresenceWriter.exe', 'StoreDesktopExtension.exe']
+# 'msedgewebview2.exe' apparently is a bad idea to add to the list#
 ###################################################################
-CHECK_INTERVAL = 2 #### change seconds interval if you like ########
-####################################################################
+CHECK_INTERVAL = 2 #### change seconds interval if you like #######
+###################################################################
+
 HIT_COUNT = int(len(TARGET_PROCESSES))
 BODY_COUNT = int(0)
 
@@ -120,5 +122,6 @@ try:
 except KeyboardInterrupt:
     print(f"\n# killing spree [\033[92mconcluded\033[0m] \033[92m//\033[0m body count [\033[91m{BODY_COUNT}\033[0m]")
     sys.exit(0)
+
 
 
