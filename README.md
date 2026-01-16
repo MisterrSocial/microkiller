@@ -12,4 +12,5 @@ if you get an error you likely either do not have python installed or do not hav
 
 sorry if my repo is a bit rough this is my first code publish in almost 20 years lol.
 
-<img width="1332" height="328" alt="ssv002" src="https://github.com/user-attachments/assets/0c54bbd2-6eb2-4759-a236-9cf79627e773" />
+
+<img width="1332" height="338" alt="ss3" src="https://github.com/user-attachments/assets/79485afc-bac8-49b3-bc81-d693a36ffcea" />
